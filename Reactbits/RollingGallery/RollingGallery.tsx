@@ -319,7 +319,7 @@ const defaultImages: {
 ];
 
 
-const RollingGallery: React.FC<RollingGalleryProps> = () => {
+const RollingGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleCardClick = (index: number) => {
