@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const { isDarkMode } = useTheme();
 
-  const baseClasses = "relative w-full min-h-screen flex items-center justify-center px-4 py-20 sm:px-6 lg:px-8";
-  const themeBg = isDarkMode ? "bg-white text-slate-900" : "bg-black text-white";
+  const baseClasses =
+    "relative w-full min-h-screen flex items-center justify-center px-4 py-20 sm:px-6 lg:px-8";
+  const themeBg = isDarkMode
+    ? "bg-white text-slate-900"
+    : "bg-black text-white";
 
   return (
     <section id="projects" className={`${baseClasses} ${themeBg}`}>
@@ -29,7 +32,7 @@ export default function Projects() {
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <RollingGallery autoplay pauseOnHover />
+          <RollingGallery />
         </motion.div>
       </div>
     </section>
