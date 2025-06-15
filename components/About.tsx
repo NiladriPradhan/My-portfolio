@@ -60,10 +60,10 @@ export default function About() {
           modern web technologies including HTML, CSS, JavaScript, TypeScript,
           and React.js.
           <br className="hidden md:block" />
-          <br />I enjoy crafting smooth, interactive, and user-friendly web
+          <br />{`I enjoy crafting smooth, interactive, and user-friendly web
           experiences that solve real-world problems. Currently, I'm looking for
           an exciting opportunity to grow, learn, and contribute to impactful
-          projects in a collaborative environment.
+          projects in a collaborative environment.`}
         </motion.p>
       </div>
     </section>
