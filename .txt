@@ -1,0 +1,11 @@
+const defaultImages: { name: string; img: StaticImageData; url: string }[] = [
+  { name: "Ecommerce-clone", img: ecommerce, url: "https://ecommerce..." },
+  { name: "Exercises-Tracker", img: exercise, url: "https://exercise..." },
+  { name: "Weather-app", img: weather, url: "https://weather..." },
+  { name: "Netflix-clone", img: netflix, url: "https://netflix..." },
+  { name: "Exercises-Tracker", img: exercise, url: "https://exercise..." },
+  { name: "Weather-app", img: weather, url: "https://weather..." },
+  { name: "Ecommerce-clone", img: ecommerce, url: "https://ecommerce..." },
+  { name: "Exercises-Tracker", img: exercise, url: "https://exercise..." },
+  { name: "Weather-app", img: weather, url: "https://weather..." },
+];
