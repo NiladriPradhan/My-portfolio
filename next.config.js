@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  webpack: (config: { resolve: { alias: any; }; }) => {
+const nextConfig = {
+  // 👇 REQUIRED to silence Turbopack in Next 16
+  turbopack: {},
+
+  webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       "react-native$": "react-native-web",
