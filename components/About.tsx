@@ -9,8 +9,17 @@ export default function About() {
  const { isDarkMode } = useTheme();
 
  const text = "Frontend Developer";
+ 
+  const baseClasses =
+    "relative w-full min-h-screen flex items-center justify-center px-4 py-20 sm:px-6 lg:px-8";
+  const themeBg = isDarkMode
+    ? "bg-white text-slate-900"
+    : "bg-black text-white";
+
   return (
-    <div className="flex justify-center mx-auto">
+    <section id="about" className={`${baseClasses} ${themeBg}`}>
+
+    <div id="about" className="flex justify-center mx-auto">
       <StarBorder as="button" className="custom-class" color="cyan" speed="5s">
         {/* Title with Gradient & Animation */}
         <motion.h1
@@ -58,5 +67,6 @@ export default function About() {
         </div>
       </StarBorder>
     </div>
+    </section>
   );
 }

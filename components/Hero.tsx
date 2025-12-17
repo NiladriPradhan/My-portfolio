@@ -99,7 +99,7 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          <a href="#about" aria-label="Get Started">
+          {/* <a href="#about" aria-label="Get Started">
             <StarBorder
               as="button"
               className="px-6 py-3 text-base sm:text-lg md:text-xl font-semibold"
@@ -108,7 +108,7 @@ const Hero = () => {
             >
               Get More
             </StarBorder>
-          </a>
+          </a> */}
         </motion.div>
       </div>
     </section>
