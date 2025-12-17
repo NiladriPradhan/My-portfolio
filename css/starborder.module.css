@@ -1,11 +1,11 @@
-.star-border-container {
+.star_border_container {
   display: inline-block;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.border-gradient-bottom {
+.border_gradient_bottom {
   position: absolute;
   width: 300%;
   height: 50%;
@@ -17,7 +17,7 @@
   z-index: 0;
 }
 
-.border-gradient-top {
+.border_gradient_top {
   position: absolute;
   opacity: 0.7;
   width: 300%;
@@ -29,7 +29,7 @@
   z-index: 0;
 }
 
-.inner-content {
+.inner_content {
   position: relative;
   background: linear-gradient(to bottom, #060010, #111);
   border: 1px solid #222;
