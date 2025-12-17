@@ -2,7 +2,6 @@ import dynamic from "next/dynamic";
 import { useTheme } from "@/ThemeContext";
 import { motion } from "framer-motion";
 import { memo } from "react";
-import StarBorder from "@/Reactbits/StarBorder/StarBorder";
 import TrueFocus from "@/Reactbits/TrueFocus/TrueFocus";
 
 const Particles = dynamic(() => import("@/Reactbits/Particles/Particles"), {
@@ -99,16 +98,6 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          {/* <a href="#about" aria-label="Get Started">
-            <StarBorder
-              as="button"
-              className="px-6 py-3 text-base sm:text-lg md:text-xl font-semibold"
-              color="cyan"
-              speed="5s"
-            >
-              Get More
-            </StarBorder>
-          </a> */}
         </motion.div>
       </div>
     </section>
