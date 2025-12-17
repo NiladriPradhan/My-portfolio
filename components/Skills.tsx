@@ -5,8 +5,8 @@ import SkillCard from "./SkillCard";
 import { useTheme } from "@/ThemeContext";
 
 const skills = [
-  { title: "React", icon: <FaReact className="text-cyan-400" /> },
   { title: "Javascript", icon: <FaJs className="text-yellow-300" /> },
+  { title: "React", icon: <FaReact className="text-cyan-400" /> },
   { title: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { title: "Tailwind", icon: <SiTailwindcss className="text-blue-400" /> },
   { title: "MongoDB", icon: <SiMongodb className="text-green-600" /> },

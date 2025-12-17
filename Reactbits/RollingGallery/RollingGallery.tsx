@@ -234,8 +234,11 @@ import Image, { StaticImageData } from "next/image";
 import ecommerce from "@/public/images/ecommerce2.jpg";
 import exercise from "@/public/images/exercise.png";
 import netflix from "@/public/images/netflix-banner.png";
-import weather from "@/public/images/weather.png";
 import disney from "@/public/images/disney.png";
+import jobPortal from "@/public/images/jobportal.png";
+import movieApp from "@/public/images/movie.png";
+import foodApp from "@/public/images/foodApp.png";
+import StarBorder from "@/components/StarBorder";
 
 const defaultImages: {
   name: string;
@@ -247,7 +250,7 @@ const defaultImages: {
     name: "Ecommerce-clone",
     img: ecommerce,
     // url: "https://ecommerce-5r0mcb5s2-niladripradhans-projects.vercel.app/",
-    url:"https://ecommerce-clone-8l9l.vercel.app/",
+    url: "https://ecommerce-clone-8l9l.vercel.app/",
     desc: [
       { title: "Frontend", details: "React.js, TypeScript, Tailwind CSS" },
       { title: "State Management", details: "Redux Toolkit" },
@@ -256,6 +259,97 @@ const defaultImages: {
         title: "Features",
         details:
           "Product listing, Product details, Cart management, Responsive Design",
+      },
+    ],
+  },
+  {
+    name: "Job Portal (MERN Stack)",
+    img: jobPortal, // update image variable if needed
+    url: "https://job-portal-frontend-one-topaz.vercel.app/",
+    desc: [
+      {
+        title: "Frontend",
+        details: "React.js, TypeScript, Tailwind CSS, shadcn/ui",
+      },
+      {
+        title: "State Management",
+        details: "Redux Toolkit",
+      },
+      {
+        title: "Backend",
+        details: "Node.js, Express.js",
+      },
+      {
+        title: "Database",
+        details: "MongoDB, Mongoose",
+      },
+      {
+        title: "Authentication",
+        details: "JWT, Cookies, Role-based access (Admin/User)",
+      },
+      {
+        title: "Features",
+        details:
+          "Company management, Job posting & editing, Job search & filtering, File upload (company logo), Admin dashboard, Secure APIs, Responsive design",
+      },
+    ],
+  },
+
+  {
+    name: "Movie App",
+    img: movieApp, // update image variable if needed
+    url: "https://movie-app-omega-pink-18.vercel.app",
+    desc: [
+      {
+        title: "Frontend",
+        details: "React.js, JavaScript, Tailwind CSS",
+      },
+      {
+        title: "API",
+        details: "OMDB API",
+      },
+      {
+        title: "Features",
+        details:
+          "Movie search functionality, Dynamic movie listings, Responsive UI, Modular & reusable components",
+      },
+      {
+        title: "Highlights",
+        details:
+          "Real-time search results, Clean UI design, Optimized API calls",
+      },
+    ],
+  },
+  {
+    name: "Food Ordering Platform",
+    img: foodApp, // update image variable if needed
+    url: "https://restaurent-app-kappa-three.vercel.app",
+    desc: [
+      {
+        title: "Frontend",
+        details: "React.js, JavaScript, Tailwind CSS",
+      },
+      {
+        title: "State Management",
+        details: "Redux Toolkit",
+      },
+      {
+        title: "Authentication",
+        details: "Clerk Auth",
+      },
+      {
+        title: "Features",
+        details:
+          "Category-based food browsing, Advanced filtering, Add to Cart, Quantity management, Order summary",
+      },
+      {
+        title: "Admin Panel",
+        details: "Dashboard for managing food items, orders, and users",
+      },
+      {
+        title: "Highlights",
+        details:
+          "Fully responsive UI, Scalable component structure, Smooth cart experience",
       },
     ],
   },
@@ -273,20 +367,7 @@ const defaultImages: {
       },
     ],
   },
-  {
-    name: "Weather-app",
-    img: weather,
-    url: "https://weather-app-nu-lime.vercel.app/",
-    desc: [
-      { title: "Frontend", details: "React.js, Tailwind CSS" },
-      { title: "API", details: "OpenWeatherMap API" },
-      {
-        title: "Features",
-        details:
-          "Current weather, City search, Dynamic background based on weather",
-      },
-    ],
-  },
+
   {
     name: "Netflix-clone",
     img: netflix,
@@ -318,7 +399,6 @@ const defaultImages: {
   },
 ];
 
-
 const RollingGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
@@ -327,9 +407,10 @@ const RollingGallery = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4">
+    <div className="w-full max-w-max mx-auto p-4">
       <motion.div
-        className="flex gap-6 overflow-x-auto px-2 py-4 custom-scrollbar"
+        // className="flex gap-6 overflow-x-auto px-2 py-4 custom-scrollbar"
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2"
         drag="x"
         dragConstraints={{ left: -500, right: 0 }}
       >
@@ -337,7 +418,7 @@ const RollingGallery = () => {
           <motion.div
             key={i}
             onClick={() => handleCardClick(i)}
-            className="min-w-[300px] cursor-pointer rounded-lg border-2 border-gray-700 bg-gray-800 p-3 shadow-lg hover:scale-105 transition-transform duration-300"
+            className="min-w-[300px] cursor-pointer rounded-lg border border-gray-700  p-3 shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <Image
               src={item.img}
@@ -355,7 +436,7 @@ const RollingGallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mt-6 bg-gray-900 text-white p-4 rounded-lg max-w-3xl mx-auto"
+          className="mt-6 bg-transparent border border-gray-800 text-white p-4 rounded-lg max-w-3xl mx-auto"
         >
           <h2 className="text-2xl font-bold mb-4">
             {defaultImages[selectedIndex].name}
@@ -373,9 +454,16 @@ const RollingGallery = () => {
               href={defaultImages[selectedIndex].url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+              // className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
             >
-              Visit Project
+              <StarBorder
+                as="button"
+                className="px-6 py-3 text-base sm:text-lg md:text-xl font-semibold"
+                color="cyan"
+                speed="5s"
+              >
+                Visit Project
+              </StarBorder>
             </a>
           </div>
         </motion.div>

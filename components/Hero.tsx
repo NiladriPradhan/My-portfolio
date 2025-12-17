@@ -106,7 +106,7 @@ const Hero = () => {
               color="cyan"
               speed="5s"
             >
-              Get Started
+              Get More
             </StarBorder>
           </a>
         </motion.div>
